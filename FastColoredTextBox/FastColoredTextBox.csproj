@@ -2,11 +2,19 @@
 
     <PropertyGroup>
         <UseWindowsForms>true</UseWindowsForms>
+        <RootNamespace>FastColoredTextBoxNS</RootNamespace>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup>
-        <NoWarn>$(NoWarn);WFO1000</NoWarn>
+        <NoWarn>$(NoWarn);WFO1000;CS1572;CS1573;CS1584;CS1591;CS1658</NoWarn>
     </PropertyGroup>
+
+    <Target Name="CopyOutputToBinaryDirectory" AfterTargets="Pack">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(DocumentationFile)" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(BinaryDirectory)" />
+    </Target>
 
     <PropertyGroup>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -20,7 +28,6 @@
         <PackageReleaseNotes>A .NET 10 / VS 2026 fork of the FastColoredTextBox project by Pavel Torgashov.</PackageReleaseNotes>
         <PackageLicenseFile>license.txt</PackageLicenseFile>
         <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-        <Authors>$(Company),vurdalakov</Authors>
     </PropertyGroup>
 
     <ItemGroup>

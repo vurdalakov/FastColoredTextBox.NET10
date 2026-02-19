@@ -3,6 +3,7 @@
     <PropertyGroup>
         <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
         <TargetFramework>net10.0-windows</TargetFramework>
+        <BinaryDirectory>..\Binary</BinaryDirectory>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -24,9 +25,8 @@
     <PropertyGroup>
         <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
         <Company>Pavel Torgashov</Company>
-        <Authors>$(Company)</Authors>
         <Product>FastColoredTextBox</Product>
-        <Description>Fast сolored textbox control</Description>
+        <Description>Fast colored textbox control</Description>
         <Copyright>© Pavel Torgashov, 2011-2016, pavel_torgashov@ukr.net.</Copyright>
         <VersionRevision>$([System.DateTime]::UtcNow.Subtract($([System.DateTime]::new(2001,1,1))).TotalDays.ToString("0"))</VersionRevision>
         <Version>2.16.26.$(VersionRevision)</Version>

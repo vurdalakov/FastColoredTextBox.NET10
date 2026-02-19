@@ -3,6 +3,7 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <UseWindowsForms>true</UseWindowsForms>
+        <RootNamespace>Tester</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -13,5 +14,13 @@
         <ProjectReference Include="..\FastColoredTextBox\FastColoredTextBox.csproj" />
         <Reference Include="TabStrip" />
     </ItemGroup>
+
+    <Target Name="CopyOutputToBinaryDirectory" AfterTargets="Build">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)$(AssemblyName).exe" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)$(AssemblyName).runtimeconfig.json" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)TabStrip.dll" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(ProjectDir)htmlDesc.xml" DestinationFolder="$(BinaryDirectory)" />
+    </Target>
 
 </Project>

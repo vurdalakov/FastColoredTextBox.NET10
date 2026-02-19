@@ -17,7 +17,6 @@
         <Import Include="System.Data" />
         <Import Include="System.Drawing" />
         <Import Include="System.Windows.Forms" />
-        <!--<Import Include="FastColoredTextBoxNS" />-->
     </ItemGroup>
 
     <ItemGroup>
@@ -34,5 +33,13 @@
             <LastGenOutput>Application.Designer.vb</LastGenOutput>
         </None>
     </ItemGroup>
+
+    <Target Name="CopyOutputToBinaryDirectory" AfterTargets="Build">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)$(AssemblyName).exe" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)$(AssemblyName).runtimeconfig.json" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(OutDir)TabStrip.dll" DestinationFolder="$(BinaryDirectory)" />
+        <Copy SourceFiles="$(ProjectDir)htmlDesc.xml" DestinationFolder="$(BinaryDirectory)" />
+    </Target>
 
 </Project>
