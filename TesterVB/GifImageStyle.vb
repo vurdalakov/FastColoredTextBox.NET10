@@ -3,6 +3,7 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports Range = FastColoredTextBoxNS.Range
 
 Namespace TesterVB
     Friend Class GifImageStyle

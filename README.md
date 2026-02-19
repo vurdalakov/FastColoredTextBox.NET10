@@ -1,3 +1,15 @@
+FastColoredTextBox.NET10
+========================
+
+This is a .NET 10 / VS 2026 fork of the [FastColoredTextBox](https://github.com/PavelTorgashov/FastColoredTextBox) project by [Pavel Torgashov](https://github.com/PavelTorgashov).
+
+* NuGet package: https://www.nuget.org/packages/FastColoredTextBox.NET10
+* CodeProject article in Internet Archive: https://web.archive.org/web/20240814071016/https://www.codeproject.com/Articles/161871/Fast-Colored-TextBox-for-syntax-highlighting-2
+
+Original README below.
+
+---
+
 FastColoredTextBox
 ==================
 

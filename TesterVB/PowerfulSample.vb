@@ -1,6 +1,8 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.IO
 Imports FastColoredTextBoxNS
+Imports System.Windows.Forms
+Imports System.Drawing
 
 
 ''' <summary>

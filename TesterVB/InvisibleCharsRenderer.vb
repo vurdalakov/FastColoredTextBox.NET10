@@ -2,6 +2,7 @@ Imports FastColoredTextBoxNS
 Imports System
 Imports System.Collections.Generic
 Imports System.Drawing
+Imports Range = FastColoredTextBoxNS.Range
 
 Namespace TesterVB
     Public Class InvisibleCharsRenderer

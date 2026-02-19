@@ -1,0 +1,5 @@
+<Solution>
+    <Project Path="FastColoredTextBox/FastColoredTextBox.csproj" />
+    <Project Path="Tester/Tester.csproj" />
+    <Project Path="TesterVB/TesterVB.vbproj" />
+</Solution>
